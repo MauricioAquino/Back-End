@@ -9,11 +9,11 @@
     <body>
         <form name="Datos" method="POST" data-netlify="true" onsubmit="return validation()">
             <p>Nombre: <input type="text" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="El nombre solo debe contener letras" id="nombre" name="nombre" size="40" maxlength="50"></p>
-            <p>Año de nacimiento: <input type="number" id="age" name="nacido" min="1900" max="2023"></p>
-            <p>Estatura: <input type="text" id="est"></p>
+            <p>Año de nacimiento: <input type="number" id="age" name="Año de Nacimiento" min="1900" max="2023"></p>
+            <p>Estatura: <input name="Estatura" type="text" id="est"></p>
             <p>Sexo:
-                <input type="radio" name="hm" value="h">Hombre
-                <input type="radio" name="hm" value="m">Mujer
+                <input type="radio" name="Sexo" value="h">Hombre
+                <input type="radio" name="Sexo" value="m">Mujer
             </p>
             <p>
                 <input type="submit" value="Enviar">
@@ -26,7 +26,7 @@
                 var nameField = document.getElementById("nombre").value;
                 var ageField = document.getElementById("age").value;
                 var valor = document.getElementById("est").value;
-                var ratioOptions = document.getElementsByName("hm");
+                var ratioOptions = document.getElementsByName("sexo");
                 var ratioValidation = false;
 
                 if(/[0-9]/.test(nameField)){
